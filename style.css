@@ -37,7 +37,7 @@ a {
 .content {
     /* this is needed or the background will be offset by a few pixels at the top */
     position: relative;
-    top: 50vh;
+    top: 465px;
     border-radius: 40px 40px 0px 0px;
     background-color: #2d353b;
     color: white;
@@ -64,9 +64,7 @@ a {
     width: 110%;
     height: 110%;
 
-    filter: blur(2px);
-
-    /* overflow: hidden; */
+    /* filter: blur(2px); */
 }
 
 .heading {
@@ -109,13 +107,22 @@ h1 {
 button {
     height: 36px;
     width: 100px;
-    background-color: #889aa8;
+    background-color: #68757f;
     border-radius: 999px;
     border: none;
     transition: all 0.2s ease-in-out;
+    color: white;
 }
 button:hover {
     cursor: pointer;
-    background-color: #b9cbdb;
+    background-color: #96aabc;
     transform: scale(1.1);
+}
+code {
+    background-color: #525c64;
+    padding: 5px;
+    border-radius: 5px;
+}
+.paper-mc-settings li {
+    margin-bottom: 10px;
 }
