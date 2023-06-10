@@ -31,7 +31,7 @@ body {
 }
 
 a {
-    color: lightblue;
+    color: rgb(210, 235, 243);
 }
 
 .content {
@@ -205,4 +205,8 @@ z-index:9
 padding:30px 15px;
 line-height:30px;
 color:#000d42
+}
+
+.rules em {
+    color: #bebebe;
 }
