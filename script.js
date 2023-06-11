@@ -4,8 +4,7 @@
 // document.documentElement.style.setProperty('--main-height', document.querySelector(".content").offsetHeight + "px");
 // size of main-flex
 
-const ip = "random-name-coming-soon-tm.ply.gg";
-// const ip = "play.hypixel.net";
+const ip = "cameras-chemical.joinmc.link";
 
 var url = `https://api.minetools.eu/ping/${ip}/25565`;
  
