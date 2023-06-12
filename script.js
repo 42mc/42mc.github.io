@@ -6,28 +6,40 @@
 
 const ip = "cameras-chemical.joinmc.link";
 
-var url = `https://api.minetools.eu/ping/${ip}/25565`;
- 
-$.getJSON(url, function(r) {
-    //data is the JSON string
- if(r.error){
-    $('#rest').html('Server Offline');
-   return false;
- } 
-var pl = '';
- if(r.players.sample.length > 0 ){ pl = '<br>OP: '+r.players.sample[0].name;  } 
-  $('#rest').html(r.description.replace(/§(.+?)/gi, '')+'<br><b>Players Online:</b> '+r.players.online+pl);
-//  $('#favicon').attr('src', r.favicon);
-    
-});
+var url = `https://eu.mc-api.net/v3/server/ping/${ip}`
 
+
+fetch(url)
+.then((resp) => resp.json())
+.then(function(data) {
+    // Your code for handling the data you get from the API
+    if (data.players.sample.length > 0 ) {
+      var pl = "<br><ul>";
+      for (let i = 0; i < data.players.sample.length; i++) {
+        pl += "<li>" + data.players.sample[i].name + "</li>";
+      }
+      pl += "</ul>";
+    }
+    var rest = document.getElementById("rest");
+    if (data.online) {
+        rest.innerHTML = '<br><b>Players Online:</b> ' + data.players.online + pl;
+        // console.log('<br><b>Players Online:</b> ' + data.players.online + pl);
+    } else {
+        rest.innerHTML = "Server Offline";
+    }
+})
+.catch(function(error) {
+    // Your code for handling errors
+    var rest = document.getElementById("rest");
+    rest.innerHTML = "Server Offline";
+});
 
 
 // on page load
 window.addEventListener("load", function() {
     let mainFlexHeight = document.querySelector(".main-flex").offsetHeight;
     document.documentElement.style.setProperty('--main-flex-height', mainFlexHeight + "px");
-    console.log("mainFlexHeight: " + mainFlexHeight + "px");
+    // console.log("mainFlexHeight: " + mainFlexHeight + "px");
 });
 
 
