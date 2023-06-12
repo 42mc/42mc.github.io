@@ -42,7 +42,7 @@ fetch(url)
 .catch(function(error) {
     // Your code for handling errors
     var rest = document.getElementById("rest");
-    rest.innerHTML = "Server Offlisne";
+    rest.innerHTML = "Server Offline";
     console.warn(error);
 });
 
