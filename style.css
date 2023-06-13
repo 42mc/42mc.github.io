@@ -221,3 +221,10 @@ h3::before {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.dynmap iframe {
+    width: 80%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+}
