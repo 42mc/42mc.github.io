@@ -198,7 +198,8 @@ font-weight:400;
     padding:30px 15px;
     line-height:30px;
     color:#000d42;
-    height: 200px;
+    min-height: 100px;
+    max-height: 200px;
     overflow: auto;
 }
 
