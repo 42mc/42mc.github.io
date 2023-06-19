@@ -190,7 +190,7 @@ font-weight:400;
     height: 80px;
     border-radius: 50%;
     overflow:hidden;
-    border:3px solid #fff;
+    border: 3px solid #fff;
     box-shadow:0 4px 3px #0002;
     z-index:9
 }
@@ -209,7 +209,8 @@ font-weight:400;
 h2:not(.card h2)::before {
     content: "";
     display: block;
-    border-top: 5px solid rgba(255, 255, 255, 0.5);
+    /* border-top: 5px solid rgba(255, 255, 255, 0.5); */
+    border-top: 5px solid rgba(214, 153, 182, 0.7);
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
